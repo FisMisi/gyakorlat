@@ -36,4 +36,25 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+    
+    //passwordre mutató
+//     public function setPasswordAttribute($password)
+//    {
+//        $this->attributes['password'] = bcrypt($password);
+//    }
+    
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
+    
+    public function isAdmin()
+    {
+        
+        if(auth()->check() && auth()->user()->admin == 1)
+        {
+            return true;
+        }
+        return false;
+    }
 }

@@ -1,45 +1,17 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.master')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title', 'Welcome')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+@section('sidebar')
+    @parent
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+@endsection
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
+@section('content')
+    <p>Real: Elhagyni Madridot? Miért ne? – Cristiano Ronaldo</p>
+    
+    Cristiano Ronaldo távozása nem először került be a sajtóba, a Real Madrid portugál ászát korábbi klubjával, a Manchester Uniteddel, valamint a Paris Saint-Germainnel boronálták össze a legtöbbször a utóbbi időben.
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+„Elhagyni a Real Madridot? Miért ne? Sosem tudhatod, mit hoz a holnap, azt kell tenned, amitől boldog vagy…” – mondta a Kickernek Cristiano Ronaldo, aki elárulta, szerinte ki a legjobb.
+„Erre a kérdésre mindenki más választ ad, Te azt mondod, Lionel Messi a legjobb, más szerint Andrés Iniesta. Tiszteletben tartom, számomra azonban én vagyok a világ legjobb futballistája” – tette hozzá CR.
+@endsection
