@@ -13,6 +13,15 @@
         
         <li role="presentation"><a href="{{action('TagController@index')}}">Tags</a></li>
         <li role="presentation"><a href="{{action('TagController@create')}}">Create Tag</a></li>
+        
     </ul>
+      {!! Form::open(array('url'=>'list','class'=>'navbar-form navbar-left','role'=>'search')) !!}
+<!--            {!! Form::hidden('input_key', Input::old('input_key'),array('id'=>'input_key'))!!}-->
+            {!! Form::text('term','',array('class'=>'ui-widget uk-width-1-1, ui-widget-content ui-corner-all', 'id'=>'term')) !!}
+                
+            {!! Form::submit('Go',['class'=>'btn btn-default']) !!}
+        {!! Form::close() !!}
+        
+        
   </div>
 </nav>

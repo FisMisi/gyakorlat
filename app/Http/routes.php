@@ -24,6 +24,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::any('get-search' , 'ListController@getSearch')->name('get-search');
+Route::any('list' , 'ListController@getlist')->name('list');
 
 Route::get('home', 'HomeController@index');
 
