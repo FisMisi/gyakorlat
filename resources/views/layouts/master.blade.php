@@ -30,19 +30,19 @@
         
        @section('main')
        
-        @if(Session::has('flash_message'))
-            <div class="alert alert-success">
-                <button type="button" class="close" data-dissmiss="alert" aria-hidden="true">&times;</button>
-               {{ session('flash_message') }}
+            @if(Session::has('flash_message'))
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dissmiss="alert" aria-hidden="true">&times;</button>
+                   {{ session('flash_message') }}
+                </div>
+            @endif
+            <div id="content">
+              @yield('content')
             </div>
-        @endif
-        <div id="content">
-          @yield('content')
-        </div>
- 
-        <aside id="sidebar">
-          @yield('sidebar')
-        </aside>
+
+            <aside id="sidebar">
+              @yield('sidebar')
+            </aside>
        @show
      </div>
   </div>
